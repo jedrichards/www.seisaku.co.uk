@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Seisaku portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "forever -m --minUptime 5000 --spinSleepTime 5000 index.js",
+    "start-dev": "nodemon -e js,hbs index.js"
+  },
+  "dependencies": {
+    "handlebars": "^2.0.0",
+    "hapi": "^8.0.0"
+  }
+}
