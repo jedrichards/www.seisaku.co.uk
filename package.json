@@ -6,8 +6,8 @@
   "scripts": {
     "start": "forever -m --minUptime 5000 --spinSleepTime 5000 index.js",
     "start-dev": "export $(cat .env|xargs) && nodemon -e js,hbs index.js",
-    "build:js": "browserify client-js/index.js > public/js/index.js",
-    "postinstall": "echo 'Eh?'"
+    "build": "browserify client-js/index.js > public/js/index.js",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "browserify": "^8.0.3",
