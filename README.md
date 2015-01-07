@@ -1,4 +1,4 @@
-# Portfolio
+# www.seisaku.co.uk
 
 My personal portfolio site.
 
@@ -17,9 +17,9 @@ npm run start-dev
 
 ## Deployment
 
-1. Add the Dokku app server remote:
+1. Add a `www-seisaku-co-uk` remote on the Dokku app server:
 ```
-git remote add dokku dokku@seisakuapp.co.uk:portfolio
+git remote add dokku dokku@seisakuapp.co.uk:www-seisaku-co-uk
 ```
 
 2. Push the master branch to deploy:
