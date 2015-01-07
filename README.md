@@ -13,8 +13,8 @@ The following npm scripts are available:
 
 Name | Description
 --- | ---
-`npm start` | Starts the server in production mode. Dokku runs this script automatically during deployment to start the app.
-`npm run start:dev` | Starts the server in development mode, restarting the server and rebuilding when local files change.
+`start` | Starts the server in production mode. Dokku runs this script automatically during deployment to start the app.
+`start:dev` | Starts the server in development mode, restarting the server and rebuilding when local files change.
 
 ## Deployment
 

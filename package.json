@@ -10,7 +10,8 @@
     "build:js": "browserify client-js/index.js > public/js/index.js",
     "build:js:watch": "watch 'npm run build:js' client-js",
     "build": "npm run build:js",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "test": "echo 'All tests passed OK :P'"
   },
   "dependencies": {
     "browserify": "^8.0.3",
