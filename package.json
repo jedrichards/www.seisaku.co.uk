@@ -1,13 +1,16 @@
 {
-  "name": "portfolio",
+  "name": "www.seisaku.co.uk",
   "version": "1.0.0",
   "description": "Seisaku portfolio",
   "main": "index.js",
   "scripts": {
     "start": "forever -m --minUptime 5000 --spinSleepTime 5000 index.js",
-    "start-dev": "nodemon -e js,hbs index.js"
+    "start-dev": "export $(cat .env|xargs) && nodemon -e js,hbs index.js",
+    "build:js": "browserify client-js/index.js > public/js/index.js",
+    "postinstall": "npm run build:js"
   },
   "dependencies": {
+    "browserify": "^8.0.3",
     "forever": "^0.13.0",
     "handlebars": "^2.0.0",
     "hapi": "^8.0.0",
@@ -15,5 +18,9 @@
   },
   "engines": {
     "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jedrichards/portfolio-three.git"
   }
 }
