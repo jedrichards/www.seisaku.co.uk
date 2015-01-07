@@ -11,10 +11,13 @@ server.views({
         hbs: require('handlebars')
     },
     relativeTo: __dirname,
-    path: './views'
+    path: './views',
+    layout: true,
+    layoutPath: './views/layout'
 });
 
 server.route(require('./routes/index'));
+server.route(require('./routes/project'));
 
 server.start(function () {
     console.log('Server started', server.info.uri);
