@@ -1,23 +1,52 @@
 # www.seisaku.co.uk
 
-My personal portfolio site.
+![Codeship Badge](https://codeship.com/projects/527c06e0-78d1-0132-c5fa-26f825463266/status?branch=master)
 
-https://codeship.com/projects/527c06e0-78d1-0132-c5fa-26f825463266/status?branch=master
+My personal portfolio site.
 
 ## Technologies
 
 - Node.js [Hapi](https://github.com/hapijs/hapi) server
-- [Dokku](http://progrium.viewdocs.io/dokku/) deployment
+- [Dokku](http://progrium.viewdocs.io/dokku/) Docker hosting
+- [Codeship](https://codeship.com) continuous deployment
 
 ## Development
 
-The following npm scripts are available:
+Interact with this project via `npm run`. The following npm scripts comprise the main API (check `package.json` for more):
 
 Name | Description
 --- | ---
-`start` | Starts the server in production mode. Dokku runs this script automatically during deployment to start the app.
+`start` | Starts the server in production mode. Dokku runs this script automatically after deployment to start the app.
 `start:dev` | Starts the server in development mode, restarting the server and rebuilding when local files change.
 
 ## Deployment
 
-Pushes to the `master` branch will trigger Codeship to deploy to Dokku.
+This app conforms to the Heroku Node.js buildpack format, and is therefore deployable on Dokku.
+
+Successfull builds on the `master` branch will trigger Codeship to deploy to a Dokku host and make the changes live.
+
+## App components
+
+### Entry point
+
+The server entry point is `index.js`, which is where Hapi is configured.
+
+### Views
+
+The views are Handlebars templates contained in `views/`.
+
+### Routes
+
+Server route configuration is in `routes/`.
+
+### CSS
+
+CSS is currently not pre or post compiled and served directly from `public/css/styles.css`.
+
+### Client JS
+
+Client JS source code is in `client-js/` and is bundled into `public/js/index.js` using Browserify during a build.
+
+### Data
+
+App data and content is contained in hardcoded JSON in `data/`, no database is currently used.
