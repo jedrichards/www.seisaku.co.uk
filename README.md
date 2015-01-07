@@ -9,11 +9,12 @@ My personal portfolio site.
 
 ## Development
 
-To start the server in development mode and start watching local files for changes run:
+The following npm scripts are available:
 
-```
-npm run start-dev
-```
+Name | Description
+--- | ---
+`npm start` | Starts the server in production mode. Dokku runs this script automatically during deployment to start the app.
+`npm run start:dev` | Starts the server in development mode, restarting the server and rebuilding when local files change.
 
 ## Deployment
 
