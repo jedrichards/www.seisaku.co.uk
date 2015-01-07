@@ -2,6 +2,8 @@
 
 My personal portfolio site.
 
+https://codeship.com/projects/527c06e0-78d1-0132-c5fa-26f825463266/status?branch=master
+
 ## Technologies
 
 - Node.js [Hapi](https://github.com/hapijs/hapi) server
@@ -18,12 +20,4 @@ Name | Description
 
 ## Deployment
 
-1. Add a `www-seisaku-co-uk` remote on the Dokku app server:
-```
-git remote add dokku dokku@seisakuapp.co.uk:www-seisaku-co-uk
-```
-
-2. Push the master branch to deploy:
-```
-git push dokku master
-```
+Pushes to the `master` branch will trigger Codeship to deploy to Dokku.
