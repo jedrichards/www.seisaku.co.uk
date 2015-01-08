@@ -71,6 +71,12 @@ a {
     color: #1AB4E2;
 }
 
+/* General Utilities */
+
+.u-hidden {
+    display: none;
+}
+
 /* Grid Utility */
 
 .u-row {
@@ -149,7 +155,11 @@ a {
 /* Typographic Utilities */
 
 .u-muted {
-    color: lightgrey;
+    color: grey;
+}
+
+.u-centred {
+    text-align: center;
 }
 
 /* Responsive Utilities */
@@ -179,6 +189,14 @@ a {
 
 .List p {
     margin: 0;
+}
+
+/* Muted Link Module */
+
+.MutedLink {
+    font-weight: 300;
+    color: grey;
+    border-bottom: 2px dashed;
 }
 
 /* Rolling Link Module */

@@ -1,22 +1,27 @@
 {
-    "grunt-rsync": {
-        "title": "grunt-rsync",
-        "description": "Blah de Blah"
-    },
-    "geogrep": {
-        "title": "GeoGrep",
-        "description": "Blah de Blah"
-    },
-    "conscious-me": {
-        "title": "Conscious.me",
-        "description": "Blah de Blah"
+    "decoded": {
+        "title": "Decoded",
+        "description": "Blah de Blah",
+        "date": "Winter 2014"
     },
     "rockabox": {
         "title": "Rockabox",
-        "description": "Blah de Blah"
+        "description": "Blah de Blah",
+        "date": "Summer 2014"
     },
-    "decoded": {
-        "title": "Decoded",
-        "description": "Blah de Blah"
+    "grunt-rsync": {
+        "title": "grunt-rsync",
+        "description": "Blah de Blah",
+        "date": "Ongoing"
+    },
+    "conscious-me": {
+        "title": "Conscious.me",
+        "description": "Blah de Blah",
+        "date": "Spring 2014"
+    },
+    "geogrep": {
+        "title": "GeoGrep",
+        "description": "Blah de Blah",
+        "date": "Winter 2013"
     }
 }

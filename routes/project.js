@@ -9,7 +9,8 @@ module.exports = {
 
         if ( project ) {
             reply.view('project', {
-                project: project
+                project: project,
+                subtitle: project.title + ' Project'
             });
         } else {
             reply.redirect('/');

@@ -1,7 +1,13 @@
+var projects = require('../data/projects');
+
 module.exports = {
     method: 'GET',
     path: '/',
-    handler: {
-        view: 'index'
+    handler: function (request, reply) {
+
+        reply.view('index', {
+            subtitle: 'Home',
+            projects: projects
+        });
     }
 };
