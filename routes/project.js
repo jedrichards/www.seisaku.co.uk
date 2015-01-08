@@ -10,7 +10,7 @@ module.exports = {
         if ( project ) {
             reply.view('project', {
                 project: project
-            })
+            });
         } else {
             reply.redirect('/');
         }

@@ -4,22 +4,28 @@
   "description": "Seisaku portfolio",
   "main": "index.js",
   "scripts": {
+    "lint": "npm run lint:server && npm run lint:client",
+    "lint:server": "jshint --config .jshintrc-server index.js routes",
+    "lint:client": "jshint --config .jshintrc-client client-js",
+    "test": "npm run lint",
     "start": "forever -m --minUptime 5000 --spinSleepTime 5000 index.js",
     "start:dev": "parallelshell 'npm run devserver' 'npm run build:js:watch'",
     "devserver": "export $(cat .env|xargs) && nodemon -e js,hbs index.js",
+    "optimise": "uglifyjs -c -o public/js/index.js -- public/js/index.js",
     "build:js": "browserify client-js/index.js > public/js/index.js",
     "build:js:watch": "watch 'npm run build:js' client-js",
     "build": "npm run build:js",
-    "postinstall": "npm run build",
-    "test": "echo 'All tests passed OK :P'"
+    "postinstall": "npm run build && npm run optimise"
   },
   "dependencies": {
     "browserify": "^8.0.3",
     "forever": "^0.13.0",
     "handlebars": "^2.0.0",
     "hapi": "^8.0.0",
+    "jshint": "^2.5.11",
     "nodemon": "^1.2.1",
     "parallelshell": "^1.0.3",
+    "uglify-js": "^2.4.16",
     "watch": "^0.13.0"
   },
   "engines": {
@@ -27,6 +33,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jedrichards/portfolio-three.git"
+    "url": "git://github.com/jedrichards/www.seisaku.co.uk.git"
   }
 }
