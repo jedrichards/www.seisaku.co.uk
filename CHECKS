@@ -1,5 +1,5 @@
 # Check app URIs respond with expected content before a deployment is made live
 # https://github.com/broadly/dokku#checks
 
-//www-seisaku-co-uk.seisakuapp.co.uk                        Hi, I'm Jed
-//www-seisaku-co-uk.seisakuapp.co.uk/static/styles.css      .SiteWrapper
+/                        Hi, I'm Jed
+/static/styles.css      .SiteWrapper
