@@ -1,8 +1,5 @@
 # Check app URIs respond with expected content before a deployment is made live
 # https://github.com/broadly/dokku#checks
 
-WAIT=5      # Wait 5s for server to spin up
-TIMEOUT=15  # Wait at most 15s for a response
-
 //www-seisaku-co-uk.seisakuapp.co.uk                        Hi, I'm Jed
 //www-seisaku-co-uk.seisakuapp.co.uk/static/styles.css      .SiteWrapper
