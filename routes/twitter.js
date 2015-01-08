@@ -13,8 +13,8 @@ module.exports = {
                 var tweet = res[0];
                 reply({
                     text: tweet.text,
-                    time: moment(new Date(tweet['created_at'])).fromNow(),
-                    link: "https://twitter.com/" + tweet.user.screen_name+"/status/" + tweet.id_str
+                    time: moment(new Date(tweet.created_at)).fromNow(),
+                    link: 'https://twitter.com/' + tweet.user.screen_name+'/status/' + tweet.id_str
                 });
             }
         });

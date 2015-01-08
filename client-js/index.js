@@ -8,7 +8,7 @@ var twitterBoltEl = document.querySelector('.js-twitter .js-bolt');
 var twitterTimeLinkEl = document.querySelector('.js-twitter .js-time-link');
 var twitterTextEl = document.querySelector('.js-twitter .js-text');
 
-xhr({uri: "/api/twitter", json: true}, onTwitterReq);
+xhr({uri: '/api/twitter', json: true}, onTwitterReq);
 
 function onTwitterReq (err, resp, body) {
 
