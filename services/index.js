@@ -1,5 +1,6 @@
 var CachedService = require('./cached-service');
 var TwitterService = require('./twitter-service');
+var LastFmService = require('./lastfm-service');
 
 var twitter = new TwitterService();
 twitter.init({
@@ -13,6 +14,16 @@ twitter.init({
 var twitterCached = new CachedService();
 twitterCached.init(twitter);
 
+var lastFm = new LastFmService();
+lastFm.init({
+    user: process.env.LASTFM_USER,
+    key: process.env.LASTFM_KEY
+});
+
+var lastFmCached = new CachedService();
+lastFmCached.init(lastFm);
+
 module.exports = {
-    twitter: twitterCached
+    twitter: twitterCached,
+    lastFm: lastFmCached
 };

@@ -20,6 +20,7 @@ server.route(require('./routes/index'));
 server.route(require('./routes/project'));
 server.route(require('./routes/static-files'));
 server.route(require('./routes/twitter'));
+server.route(require('./routes/lastfm'));
 
 server.start(function () {
     console.log('Server started', server.info.uri);

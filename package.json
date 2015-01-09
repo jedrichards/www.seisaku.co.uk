@@ -27,7 +27,9 @@
     "moment": "^2.8.4",
     "nodemon": "^1.2.1",
     "parallelshell": "^1.0.3",
+    "request": "^2.51.0",
     "twit": "^1.1.19",
+    "twitter-text": "^1.10.0",
     "uglify-js": "^2.4.16",
     "watch": "^0.13.0",
     "xhr": "^2.0.0"

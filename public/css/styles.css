@@ -171,7 +171,7 @@ a {
     }
 }
 
-/* Site Wrapper module */
+/* Site wrapper module */
 
 .SiteWrapper {
     margin: 0 auto;
@@ -180,7 +180,7 @@ a {
     padding-right: 2em;
 }
 
-/* List Module */
+/* List module */
 
 .List {
     padding: 0;
@@ -191,15 +191,15 @@ a {
     margin: 0;
 }
 
-/* Muted Link Module */
+/* Muted Link module */
 
 .MutedLink {
     font-weight: 300;
     color: grey;
-    border-bottom: 2px dashed;
+    border-bottom: 1px dashed;
 }
 
-/* Rolling Link Module */
+/* Rolling Link module */
 
 .RollingLink {
     position: relative;
