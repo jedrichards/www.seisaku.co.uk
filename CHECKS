@@ -1,5 +1,0 @@
-# Check app URIs respond with expected content before a deployment is made live
-# https://github.com/broadly/dokku#checks
-
-/                           Hi, I'm Jed
-/static/css/styles.css      .SiteWrapper
