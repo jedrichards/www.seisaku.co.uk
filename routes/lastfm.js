@@ -21,7 +21,7 @@ module.exports = {
             var time;
 
             if ( track['@attr'] && track['@attr'].nowplaying === 'true' ) {
-                time = moment().fromNow();
+                time = 'now';
             } else {
                 time = moment(new Date(track.date['#text'])).fromNow();
             }

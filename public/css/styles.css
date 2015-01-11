@@ -191,6 +191,13 @@ a {
     margin: 0;
 }
 
+/* TweetBodyText module */
+
+.TweetBodyText a {
+    font-weight: 300;
+    color: black;
+}
+
 /* Muted Link module */
 
 .MutedLink {
