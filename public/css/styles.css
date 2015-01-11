@@ -198,6 +198,12 @@ a {
     color: black;
 }
 
+/* FooterText module */
+
+.FooterText {
+    margin: 2em 0;
+}
+
 /* Muted Link module */
 
 .MutedLink {
