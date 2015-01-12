@@ -69,18 +69,24 @@ a {
 
 blockquote p:first-child:before {
     content: open-quote;
-    color: grey;
 }
 
 blockquote p:last-child:after {
     content: close-quote;
-    color: grey;
 }
 
 blockquote {
     margin: 1em 0 1em 1em;
     padding-left: 1em;
     border-left: 1px solid lightgrey;
+}
+
+code {
+    font-family: 'Source Code Pro';
+    font-weight: 300;
+    background-color: #ddd;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
 }
 
 /* General Utilities */
@@ -277,4 +283,21 @@ p .RollingLink {
     -webkit-transform: translateY(-100%);
     -moz-transform: translateY(-100%);
     transform: translateY(-100%);
+}
+
+/* Project image module */
+
+.ProjectImage {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    border: 1px solid lightgrey;
+    margin-bottom: 2em;
+}
+
+@media (max-width:767px) {
+
+    .ProjectImage {
+        margin-bottom: 1em;
+    }
 }

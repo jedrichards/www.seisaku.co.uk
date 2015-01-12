@@ -1,5 +1,9 @@
-This was a very interesting project.
+Decoded are one of the front-runners in the emerging professional digital education space, and in
+winter 2014 together with the rest of the [Comrades!](http://www.madebycomrades.com) I helped to
+provide Agile process consultancy while implementing a new key part of their web-based business
+software.
 
-Oh yes it **was**.
+Decoded's co-founder Alasdair Blackwell had this to say about the experience of working with the
+Comrades:
 
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+> Working with Matt, Mike, Jed and Pete was a joyful experience. Their combination of cutting-edge experience, process, professionalism and technical ability led to an atmosphere of trust and confidence and a regular stream of high-quality pull requests. The resulting software is robust and scaleable, and has made our business better. Couldn't recommend them enough.

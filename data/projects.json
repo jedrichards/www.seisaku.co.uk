@@ -1,26 +1,122 @@
 {
     "www-seisaku-co-uk": {
-        "title": "www.seisaku.co.uk",
-        "date": "Winter 2015"
+        "img": "/static/img/www-seisaku-co-uk.jpg",
+        "title": "Portfolio v3",
+        "date": "Winter 2015",
+        "client": {
+            "text": "None"
+        },
+        "site": {
+            "text": "github.com",
+            "href": "https://github.com/jedrichards/www.seisaku.co.uk"
+        },
+        "tags": [
+            "Node.js",
+            "npm",
+            "Automation",
+            "Hapi",
+            "Unix",
+            "HTML5",
+            "CSS3",
+            "Responsive",
+            "Codeship",
+            "Dokku",
+            "Docker"
+        ]
     },
     "decoded": {
+        "img": "/static/img/decoded.jpg",
         "title": "Decoded",
-        "date": "Winter 2014"
+        "date": "Winter 2014",
+        "client": {
+            "text": "decoded.com",
+            "href": "http://decoded.com"
+        },
+        "site": {
+            "text": "Not yet live"
+        },
+        "tags": [
+            "Agile",
+            "Consultancy",
+            "Planning",
+            "JavaScript",
+            "Responsive",
+            "Gulp",
+            "Automation",
+            "Browserify",
+            "Backbone",
+            "Marionette",
+            "Testing"
+        ]
     },
     "rockabox": {
         "title": "Rockabox",
-        "date": "Summer 2014"
-    },
-    "grunt-rsync": {
-        "title": "grunt-rsync",
-        "date": "Ongoing"
+        "date": "Summer 2014",
+        "img": "/static/img/rockabox.jpg",
+        "client": {
+            "text": "rockabox.com",
+            "href": "http://rockabox.com/"
+        },
+        "site": {
+            "text": "Internal / secret"
+        },
+        "tags": [
+            "Agile",
+            "Scoping",
+            "JavaScript",
+            "Responsive",
+            "AngularJS",
+            "Automation",
+            "Tools",
+            "Testing",
+            "Grunt"
+        ]
     },
     "conscious-me": {
         "title": "Conscious.me",
-        "date": "Spring 2014"
+        "date": "Spring 2014",
+        "img": "/static/img/conscious-me.jpg",
+        "client": {
+            "text": "sme.sh",
+            "href": "http://sme.sh"
+        },
+        "site": {
+            "text": "consciousme.com",
+            "href": "https://consciousme.com/"
+        },
+        "tags": [
+            "Planning",
+            "JavaScript",
+            "Responsive",
+            "Backbone",
+            "Marionette",
+            "Automation",
+            "Tools",
+            "Grunt"
+        ]
     },
     "geogrep": {
         "title": "GeoGrep",
         "date": "Winter 2013"
+    },
+    "grunt-rsync": {
+        "img": "/static/img/grunt-rsync.jpg",
+        "title": "grunt-rsync",
+        "date": "Ongoing",
+        "client": {
+            "text": "None"
+        },
+        "site": {
+            "text": "grunt-rsync",
+            "href": "https://www.npmjs.com/package/grunt-rsync"
+        },
+        "tags": [
+            "npm",
+            "Node.js",
+            "Automation",
+            "Tools",
+            "Grunt",
+            "Unix"
+        ]
     }
 }

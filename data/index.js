@@ -17,9 +17,5 @@ function getProject (slug) {
         project.description = markdown.toHTML(description);
     }
 
-    return {
-        title: project.title,
-        description: project.description,
-        date: project.date
-    };
+    return project;
 }
