@@ -49,4 +49,4 @@ Client JS source code is in `client-js/` and is bundled into `public/js/index.js
 
 ### Data
 
-App data and content is contained in hardcoded JSON in `data/`, no database is currently used.
+App data and content is contained in hardcoded JSON in `data/`, no database is currently used. Project descriptions are contained in markdown files in `data/md/` and converted into HTML on demand.

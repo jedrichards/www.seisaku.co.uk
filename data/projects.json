@@ -1,27 +1,26 @@
 {
+    "www-seisaku-co-uk": {
+        "title": "www.seisaku.co.uk",
+        "date": "Winter 2015"
+    },
     "decoded": {
         "title": "Decoded",
-        "description": "Blah de Blah",
         "date": "Winter 2014"
     },
     "rockabox": {
         "title": "Rockabox",
-        "description": "Blah de Blah",
         "date": "Summer 2014"
     },
     "grunt-rsync": {
         "title": "grunt-rsync",
-        "description": "Blah de Blah",
         "date": "Ongoing"
     },
     "conscious-me": {
         "title": "Conscious.me",
-        "description": "Blah de Blah",
         "date": "Spring 2014"
     },
     "geogrep": {
         "title": "GeoGrep",
-        "description": "Blah de Blah",
         "date": "Winter 2013"
     }
 }
