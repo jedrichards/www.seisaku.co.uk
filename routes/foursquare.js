@@ -8,7 +8,7 @@ module.exports = {
 
         service.call(function (err, res) {
 
-            if ( err ) return reply(500, err);
+            if ( err ) return reply.code(500);
 
             var checkin = res.response.checkins.items[0];
 

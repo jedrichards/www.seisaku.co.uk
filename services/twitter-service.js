@@ -15,16 +15,16 @@ TwitterService.prototype.init = function (ops) {
         access_token: ops.token,
         access_token_secret: ops.tokenSecret
     });
+
+    this.endpoint = 'statuses/user_timeline';
+    this.params = {
+        'screen_name': this.ops.user,
+        count: '1',
+        exclude_replies: 'true'
+    };
 };
 
 TwitterService.prototype.call = function (cb) {
 
-    var endpoint = 'statuses/user_timeline';
-    var params = {
-        'screen_name': this.ops.user,
-        count: "1",
-        exclude_replies: "true"
-    };
-
-    this.twit.get(endpoint, params, cb);
+    this.twit.get(this.endpoint, this.params, cb);
 };

@@ -2,6 +2,7 @@ var CachedService = require('./cached-service');
 var TwitterService = require('./twitter-service');
 var LastFmService = require('./lastfm-service');
 var FoursquareService = require('./foursquare-service');
+var GitHubService = require('./github-service');
 
 var twitter = new TwitterService();
 twitter.init({
@@ -32,8 +33,17 @@ foursquare.init({
 var foursquareCached = new CachedService();
 foursquareCached.init(foursquare);
 
+var github = new GitHubService();
+github.init({
+    user: process.env.GITHUB_USER
+});
+
+var githubCached = new CachedService();
+githubCached.init(github);
+
 module.exports = {
     twitter: twitterCached,
     lastFm: lastFmCached,
-    foursquare: foursquareCached
+    foursquare: foursquareCached,
+    github: githubCached
 };

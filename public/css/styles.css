@@ -27,11 +27,13 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 /* Base styles */
 
 *, *:before, *:after {
-    box-sizing:inherit;
+    box-sizing: inherit;
+    -moz-box-sizing: inherit;
 }
 
 html {
-    box-sizing:border-box;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
     font-family: 'Source Code Pro';
     background-color: white;
     color: black;
@@ -39,12 +41,6 @@ html {
 
 body {
     font-size: 16px;
-}
-
-@media (max-width:767px) {
-    body {
-        font-size: 17px;
-    }
 }
 
 h1,
@@ -117,8 +113,6 @@ blockquote {
 }
 
 .u-col {
-    position: relative;
-    min-height: 1px;
     float: left;
 }
 
@@ -201,9 +195,17 @@ blockquote {
 
 .SiteWrapper {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 50em; /* 800px */
     padding-left: 2em;
     padding-right: 2em;
+}
+
+@media (max-width:767px) {
+
+    .SiteWrapper {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 }
 
 /* List module */
@@ -244,11 +246,12 @@ blockquote {
     position: relative;
     display: inline-block;
     overflow: hidden;
+    vertical-align: text-bottom;
 }
 
 h1 .RollingLink,
 p .RollingLink {
-    vertical-align: text-bottom;
+
 }
 
 .RollingLink span {

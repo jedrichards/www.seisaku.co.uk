@@ -21,9 +21,13 @@ LastFmService.prototype.init = function (ops) {
 
 LastFmService.prototype.call = function (cb) {
 
-
     request({
         uri: this.endpoint,
         json: true
-    }, cb);
+    }, function (err, res, body) {
+
+        if ( err ) return cb(err);
+
+        cb(null, body);
+    });
 };

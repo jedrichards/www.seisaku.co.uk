@@ -9,6 +9,11 @@ var twitterTweetLinkEl = document.querySelector('.js-twitter .js-link');
 var twitterTextEl = document.querySelector('.js-twitter .js-text');
 var twitterTimeEl = document.querySelector('.js-twitter .js-time');
 
+var githubEl = document.querySelector('.js-github');
+var githubShaEl = document.querySelector('.js-github .js-sha');
+var githubRepoEl = document.querySelector('.js-github .js-repo');
+var githubTimeEl = document.querySelector('.js-github .js-time');
+
 var lastFmEl = document.querySelector('.js-lastfm');
 var lastFmVerbStem = document.querySelector('.js-lastfm .js-verb-stem');
 var lastFmTrackEl = document.querySelector('.js-lastfm .js-track');
@@ -23,6 +28,21 @@ var foursquareTimeEl = document.querySelector('.js-foursquare .js-time');
 xhr({uri: '/api/twitter', json: true}, onTwitterReq);
 xhr({uri: '/api/lastfm', json: true}, onLastFmReq);
 xhr({uri: '/api/foursquare', json: true}, onFoursquareReq);
+xhr({uri: '/api/github', json: true}, onGithubReq);
+
+function onGithubReq (err, resp, body) {
+
+    if ( err ) return;
+
+    dom.removeClass(githubEl, 'u-hidden');
+
+    githubShaEl.href = body.link;
+    githubRepoEl.href = body.link;
+
+    githubShaEl.innerHTML = body.sha;
+    githubRepoEl.innerHTML = body.repo;
+    githubTimeEl.innerHTML = body.time;
+}
 
 function onFoursquareReq (err, resp, body) {
 

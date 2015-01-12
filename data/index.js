@@ -2,6 +2,10 @@ var markdown = require('markdown').markdown;
 var projects = require('./projects');
 var fs = require('fs');
 
+module.exports = {
+    getProject: getProject
+};
+
 function getProject (slug) {
 
     var project = projects[slug];
@@ -17,9 +21,5 @@ function getProject (slug) {
         title: project.title,
         description: project.description,
         date: project.date
-    }
-}
-
-module.exports = {
-    getProject: getProject
+    };
 }

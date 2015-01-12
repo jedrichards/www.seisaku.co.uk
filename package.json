@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "npm run lint:server && npm run lint:client",
-    "lint:server": "jshint --config .jshintrc-server index.js routes",
+    "lint:server": "jshint --config .jshintrc-server index.js routes services data",
     "lint:client": "jshint --config .jshintrc-client client-js",
     "test": "npm run lint",
     "start": "forever -m --minUptime 5000 --spinSleepTime 5000 index.js",

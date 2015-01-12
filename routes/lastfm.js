@@ -8,14 +8,14 @@ module.exports = {
 
         service.call(function (err, res) {
 
-            if ( err ) return reply(500, err);
+            if ( err ) return reply.code(500);
 
             var track;
 
-            if ( Array.isArray(res.body.recenttracks.track) ) {
-                track = res.body.recenttracks.track[0];
+            if ( Array.isArray(res.recenttracks.track) ) {
+                track = res.recenttracks.track[0];
             } else {
-                track = res.body.recenttracks.track;
+                track = res.recenttracks.track;
             }
 
             var time;
