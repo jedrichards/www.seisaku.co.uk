@@ -10,11 +10,13 @@ module.exports = {
 
             if ( err ) return reply.code(500);
 
+            var commits = res.payload.commits;
+
             reply({
                 time: moment(new Date(res.created_at)).fromNow(),
                 repo: res.repo.name,
-                sha: res.payload.commits[0].sha.substring(0,5),
-                link: "https://github.com/"+res.repo.name+"/commit/"+res.payload.commits[0].sha
+                sha: commits[0].sha.substring(0,5),
+                link: 'https://github.com/' + res.repo.name + '/commit/' + commits[0].sha
             });
         });
     }
