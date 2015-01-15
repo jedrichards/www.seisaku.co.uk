@@ -1,4 +1,4 @@
-At the start of a new year and after the formation of the [Comrades!](http://www.madebycomrades.com)
+At the start of a new year and after the formation of the [Comrades](http://www.madebycomrades.com)
 it seemed appropriate to refresh my portfolio ~ this site!
 
 The idea behind the site was to use modern tools to create a site that was quick to build, easy to
