@@ -13,4 +13,4 @@ only took me a few days to build and zero-downtime Docker-based deployments to a
 a `git push` away. Yay me!
 
 The site is on [GitHub](https://github.com/jedrichards/www.seisaku.co.uk) so feel free to have a
-poke around.
+mooch around.

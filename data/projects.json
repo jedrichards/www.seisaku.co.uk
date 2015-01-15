@@ -88,6 +88,7 @@
             "Planning",
             "JavaScript",
             "Responsive",
+            "Mobile opmtimised",
             "Backbone",
             "Marionette",
             "Automation",
@@ -97,7 +98,30 @@
     },
     "geogrep": {
         "title": "GeoGrep",
-        "date": "Winter 2013"
+        "date": "Winter 2013",
+        "img": "/static/img/geogrep.jpg",
+        "client": {
+            "text": "GeoGrep",
+            "href": "http://www.geogrep.com"
+        },
+        "site": {
+            "text": "refind.in",
+            "href": "https://www.refind.in"
+        },
+        "tags": [
+            "JavaScript",
+            "Node.js",
+            "Backbone",
+            "Marionette",
+            "Leaflet",
+            "REST API",
+            "Geo search",
+            "Mapping",
+            "Geo visualisation",
+            "Geo coding",
+            "Automation",
+            "Grunt"
+        ]
     },
     "grunt-rsync": {
         "img": "/static/img/grunt-rsync.jpg",
