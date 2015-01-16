@@ -22,7 +22,7 @@ function makeHandler (el, f) {
         dom.removeClass(el, 'u-hidden');
 
         f(el, body);
-    }
+    };
 }
 
 function updateGitHub (el, body) {
