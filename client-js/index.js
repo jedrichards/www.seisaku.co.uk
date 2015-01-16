@@ -27,46 +27,46 @@ function makeHandler (el, f) {
 
 function updateGitHub (el, body) {
 
-    var githubShaEl = el.querySelector('.js-sha');
-    var githubRepoEl = el.querySelector('.js-repo');
-    var githubTimeEl = el.querySelector('.js-time');
+    var shaEl = el.querySelector('.js-sha');
+    var repoEl = el.querySelector('.js-repo');
+    var timeEl = el.querySelector('.js-time');
 
-    githubShaEl.href = body.link;
-    githubRepoEl.href = body.link;
+    shaEl.href = body.link;
+    repoEl.href = body.link;
 
-    githubShaEl.innerHTML = body.sha;
-    githubRepoEl.innerHTML = body.repo;
-    githubTimeEl.innerHTML = body.time;
+    shaEl.innerHTML = body.sha;
+    repoEl.innerHTML = body.repo;
+    timeEl.innerHTML = body.time;
 }
 
 function updateFoursquare (el, body) {
 
-    var foursquareVenue = el.querySelector('.js-venue');
-    var foursquareCity = el.querySelector('.js-city');
-    var foursquareTimeEl = el.querySelector('.js-time');
+    var venueEl = el.querySelector('.js-venue');
+    var cityEl = el.querySelector('.js-city');
+    var timeEl = el.querySelector('.js-time');
 
-    foursquareVenue.href = body.link;
-    foursquareCity.href = body.link;
+    venueEl.href = body.link;
+    cityEl.href = body.link;
 
-    foursquareVenue.innerHTML = body.venue;
-    foursquareCity.innerHTML = body.city;
-    foursquareTimeEl.innerHTML = body.time;
+    venueEl.innerHTML = body.venue;
+    cityEl.innerHTML = body.city;
+    timeEl.innerHTML = body.time;
 }
 
 function updateLastFm (el, body) {
 
-    var lastFmVerbStem = el.querySelector('.js-verb-stem');
-    var lastFmTrackEl = el.querySelector('.js-track');
-    var lastFmArtistEl = el.querySelector('.js-artist');
-    var lastFmTimeEl = el.querySelector('.js-time');
+    var verbStemEl = el.querySelector('.js-verb-stem');
+    var trackEl = el.querySelector('.js-track');
+    var artistEl = el.querySelector('.js-artist');
+    var timeEl = el.querySelector('.js-time');
 
-    lastFmTrackEl.href = body.link;
-    lastFmArtistEl.href = body.link;
+    trackEl.href = body.link;
+    artistEl.href = body.link;
 
-    lastFmVerbStem.innerHTML = body.time === 'now' ? 'ing' : 'ed';
-    lastFmTrackEl.innerHTML = body.track;
-    lastFmArtistEl.innerHTML = body.artist;
-    lastFmTimeEl.innerHTML = body.time;
+    verbStemEl.innerHTML = body.time === 'now' ? 'ing' : 'ed';
+    trackEl.innerHTML = body.track;
+    artistEl.innerHTML = body.artist;
+    timeEl.innerHTML = body.time;
 }
 
 function updateTweet (el, body) {
