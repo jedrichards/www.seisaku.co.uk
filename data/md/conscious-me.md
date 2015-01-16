@@ -7,7 +7,7 @@ The web app turned out to be a pretty full-featured social network, containing u
 scrolling, user following, visualisation of dynamic social geo-data on a map, commenting, like
 buttons and integrations with other social networks. I led the development effort on the Backbone +
 Marionette single page app which featured a heavily automated Grunt build process, while sme.sh
-developed a Python REST API as a fully separate component. This separations of concerns between
+developed a Python REST API as a fully separate component. This separation of concerns between
 front and backend led to a pretty frictionless and pleasurable development process.
 
 Founder and CEO of sme.sh Tom Quick was nice enough to make the following endorsement of our work:

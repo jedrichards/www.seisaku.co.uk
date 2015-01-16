@@ -2,39 +2,34 @@
 
 var xhr = require('xhr');
 var dom = require('ampersand-dom');
-var GlitchText = require('./glitch-text');
 
 var twitterEl = document.querySelector('.js-twitter');
-var twitterTweetLinkEl = document.querySelector('.js-twitter .js-link');
-var twitterTextEl = document.querySelector('.js-twitter .js-text');
-var twitterTimeEl = document.querySelector('.js-twitter .js-time');
-
 var githubEl = document.querySelector('.js-github');
-var githubShaEl = document.querySelector('.js-github .js-sha');
-var githubRepoEl = document.querySelector('.js-github .js-repo');
-var githubTimeEl = document.querySelector('.js-github .js-time');
-
 var lastFmEl = document.querySelector('.js-lastfm');
-var lastFmVerbStem = document.querySelector('.js-lastfm .js-verb-stem');
-var lastFmTrackEl = document.querySelector('.js-lastfm .js-track');
-var lastFmArtistEl = document.querySelector('.js-lastfm .js-artist');
-var lastFmTimeEl = document.querySelector('.js-lastfm .js-time');
-
 var foursquareEl = document.querySelector('.js-foursquare');
-var foursquareVenue = document.querySelector('.js-foursquare .js-venue');
-var foursquareCity = document.querySelector('.js-foursquare .js-city');
-var foursquareTimeEl = document.querySelector('.js-foursquare .js-time');
 
-xhr({uri: '/api/twitter', json: true}, onTwitterReq);
-xhr({uri: '/api/lastfm', json: true}, onLastFmReq);
-xhr({uri: '/api/foursquare', json: true}, onFoursquareReq);
-xhr({uri: '/api/github', json: true}, onGithubReq);
+xhr({uri: '/api/twitter', json: true}, makeHandler(twitterEl, updateTweet));
+xhr({uri: '/api/lastfm', json: true}, makeHandler(lastFmEl, updateLastFm));
+xhr({uri: '/api/foursquare', json: true}, makeHandler(foursquareEl, updateFoursquare));
+xhr({uri: '/api/github', json: true}, makeHandler(githubEl, updateGitHub));
 
-function onGithubReq (err, resp, body) {
+function makeHandler (el, f) {
 
-    if ( err ) return;
+    return function (err, res, body) {
 
-    dom.removeClass(githubEl, 'u-hidden');
+        if ( err ) return;
+
+        dom.removeClass(el, 'u-hidden');
+
+        f(el, body);
+    }
+}
+
+function updateGitHub (el, body) {
+
+    var githubShaEl = el.querySelector('.js-sha');
+    var githubRepoEl = el.querySelector('.js-repo');
+    var githubTimeEl = el.querySelector('.js-time');
 
     githubShaEl.href = body.link;
     githubRepoEl.href = body.link;
@@ -44,11 +39,11 @@ function onGithubReq (err, resp, body) {
     githubTimeEl.innerHTML = body.time;
 }
 
-function onFoursquareReq (err, resp, body) {
+function updateFoursquare (el, body) {
 
-    if ( err ) return;
-
-    dom.removeClass(foursquareEl, 'u-hidden');
+    var foursquareVenue = el.querySelector('.js-venue');
+    var foursquareCity = el.querySelector('.js-city');
+    var foursquareTimeEl = el.querySelector('.js-time');
 
     foursquareVenue.href = body.link;
     foursquareCity.href = body.link;
@@ -58,11 +53,12 @@ function onFoursquareReq (err, resp, body) {
     foursquareTimeEl.innerHTML = body.time;
 }
 
-function onLastFmReq (err, resp, body) {
+function updateLastFm (el, body) {
 
-    if ( err ) return;
-
-    dom.removeClass(lastFmEl, 'u-hidden');
+    var lastFmVerbStem = el.querySelector('.js-verb-stem');
+    var lastFmTrackEl = el.querySelector('.js-track');
+    var lastFmArtistEl = el.querySelector('.js-artist');
+    var lastFmTimeEl = el.querySelector('.js-time');
 
     lastFmTrackEl.href = body.link;
     lastFmArtistEl.href = body.link;
@@ -73,11 +69,11 @@ function onLastFmReq (err, resp, body) {
     lastFmTimeEl.innerHTML = body.time;
 }
 
-function onTwitterReq (err, resp, body) {
+function updateTweet (el, body) {
 
-    if ( err ) return;
-
-    dom.removeClass(twitterEl, 'u-hidden');
+    var twitterTweetLinkEl = el.querySelector('.js-link');
+    var twitterTextEl = el.querySelector('.js-text');
+    var twitterTimeEl = el.querySelector('.js-time');
 
     twitterTweetLinkEl.href = body.link;
     twitterTextEl.innerHTML = '“' + body.text + '”';
