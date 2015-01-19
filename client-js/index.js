@@ -34,9 +34,9 @@ function updateGitHub (el, body) {
     shaEl.href = body.link;
     repoEl.href = body.link;
 
-    shaEl.innerHTML = body.sha;
-    repoEl.innerHTML = body.repo;
-    timeEl.innerHTML = body.time;
+    shaEl.textContent = body.sha;
+    repoEl.textContent = body.repo;
+    timeEl.textContent = body.time;
 }
 
 function updateFoursquare (el, body) {
@@ -48,9 +48,9 @@ function updateFoursquare (el, body) {
     venueEl.href = body.link;
     cityEl.href = body.link;
 
-    venueEl.innerHTML = body.venue;
-    cityEl.innerHTML = body.city;
-    timeEl.innerHTML = body.time;
+    venueEl.textContent = body.venue;
+    cityEl.textContent = body.city;
+    timeEl.textContent = body.time;
 }
 
 function updateLastFm (el, body) {
@@ -63,10 +63,10 @@ function updateLastFm (el, body) {
     trackEl.href = body.link;
     artistEl.href = body.link;
 
-    verbStemEl.innerHTML = body.time === 'now' ? 'ing' : 'ed';
-    trackEl.innerHTML = body.track;
-    artistEl.innerHTML = body.artist;
-    timeEl.innerHTML = body.time;
+    verbStemEl.textContent = body.time === 'now' ? 'ing' : 'ed';
+    trackEl.textContent = body.track;
+    artistEl.textContent = body.artist;
+    timeEl.textContent = body.time;
 }
 
 function updateTweet (el, body) {
@@ -77,5 +77,5 @@ function updateTweet (el, body) {
 
     twitterTweetLinkEl.href = body.link;
     twitterTextEl.innerHTML = '“' + body.text + '”';
-    twitterTimeEl.innerHTML = body.time;
+    twitterTimeEl.textContent = body.time;
 }
