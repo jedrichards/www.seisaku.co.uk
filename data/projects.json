@@ -1,4 +1,29 @@
 {
+    "style-guide": {
+        "img": "/static/img/style-guide.jpg",
+        "title": "SUIT CSS Style Guide",
+        "date": "Spring 2015",
+        "client": {
+            "text": "RES"
+        },
+        "site": {
+            "text": "Private"
+        },
+        "tags": [
+            "Style guides",
+            "CSS3",
+            "SUIT CSS",
+            "Adaptable CSS",
+            "CSS Components",
+            "CSS Architecture",
+            "PostCSS",
+            "Responsive",
+            "npm",
+            "Node.js",
+            "Bower",
+            "Codeship"
+        ]
+    },
     "www-seisaku-co-uk": {
         "img": "/static/img/www-seisaku-co-uk.jpg",
         "title": "Portfolio v3",
