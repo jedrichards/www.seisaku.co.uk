@@ -1,4 +1,19 @@
 {
+    "es6": {
+        "title": "ES6 Learning",
+        "date": "Spring 2015",
+        "client": {
+            "text": "Self"
+        },
+        "site": {
+            "text": "es6",
+            "href": "https://github.com/jedrichards"
+        },
+        "tags": [
+           "JavaScript",
+           "ES6"
+        ]
+    },
     "style-guide": {
         "img": "/static/img/style-guide.jpg",
         "title": "SUIT CSS Style Guide",
