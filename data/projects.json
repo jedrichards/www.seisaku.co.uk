@@ -1,6 +1,27 @@
 {
+    "universal-javascript": {
+        "title": "Universal JavaScript",
+        "date": "Summer 2015",
+        "client": {
+            "text": "Self"
+        },
+        "site": {
+            "text": "AutoKitty",
+            "href": "https://github.com/madebycomrades/autokitty-react"
+        },
+        "tags": [
+           "Universal JavaScript",
+           "ES6",
+           "ES7",
+           "React",
+           "Flux",
+           "Redux",
+           "Reactive",
+           "Functional"
+        ]
+    },
     "es6": {
-        "title": "ES6 Learning",
+        "title": "ES6/7 Learning",
         "date": "Spring 2015",
         "client": {
             "text": "Self"
@@ -128,7 +149,7 @@
             "Planning",
             "JavaScript",
             "Responsive",
-            "Mobile opmtimised",
+            "Mobile optimised",
             "Backbone",
             "Marionette",
             "Automation",
