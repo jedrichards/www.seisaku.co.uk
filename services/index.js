@@ -3,6 +3,7 @@ var TwitterService = require('./twitter-service');
 var LastFmService = require('./lastfm-service');
 var FoursquareService = require('./foursquare-service');
 var GitHubService = require('./github-service');
+var StravaService = require('./strava-service');
 
 var twitter = new TwitterService();
 twitter.init({
@@ -41,9 +42,16 @@ github.init({
 var githubCached = new CachedService();
 githubCached.init(github);
 
+var strava = new StravaService();
+strava.init();
+
+var stravaCached = new CachedService();
+stravaCached.init(strava);
+
 module.exports = {
     twitter: twitterCached,
     lastFm: lastFmCached,
     foursquare: foursquareCached,
-    github: githubCached
+    github: githubCached,
+    strava: stravaCached
 };

@@ -7,11 +7,13 @@ var twitterEl = document.querySelector('.js-twitter');
 var githubEl = document.querySelector('.js-github');
 var lastFmEl = document.querySelector('.js-lastfm');
 var foursquareEl = document.querySelector('.js-foursquare');
+var stravaEl = document.querySelector('.js-strava');
 
 xhr({uri: '/api/twitter', json: true}, makeHandler(twitterEl, updateTweet));
 xhr({uri: '/api/lastfm', json: true}, makeHandler(lastFmEl, updateLastFm));
 xhr({uri: '/api/foursquare', json: true}, makeHandler(foursquareEl, updateFoursquare));
 xhr({uri: '/api/github', json: true}, makeHandler(githubEl, updateGitHub));
+xhr({uri: '/api/strava', json: true}, makeHandler(stravaEl, updateStrava));
 
 function makeHandler (el, f) {
 
@@ -78,4 +80,21 @@ function updateTweet (el, body) {
     twitterTweetLinkEl.href = body.link;
     twitterTextEl.innerHTML = '“' + body.text + '”';
     twitterTimeEl.textContent = body.time;
+}
+
+function updateStrava (el, body) {
+
+    var stravaLinkEl = el.querySelector('.js-link');
+    var stravaDistanceEl = el.querySelector('.js-distance');
+    var stravaPaceMinutesEl = el.querySelector('.js-pace-minutes');
+    var stravaPaceSecondsEl = el.querySelector('.js-pace-seconds');
+    var stravaLocationEl = el.querySelector('.js-location');
+    var stravaTimeEl = el.querySelector('.js-time');
+
+    stravaLinkEl.href = body.profile;
+    stravaDistanceEl.textContent = body.distance;
+    stravaPaceMinutesEl.textContent = body.paceMins;
+    stravaPaceSecondsEl.textContent = body.paceSecs;
+    stravaLocationEl.textContent = body.location;
+    stravaTimeEl.textContent = body.time;
 }
